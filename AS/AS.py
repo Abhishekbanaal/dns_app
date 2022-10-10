@@ -32,8 +32,6 @@ def save_dns_record(name, value, type, ttl):
 
     with open(AUTH_SERVER_DB_FILE, "w") as f:
         json.dump(existing_records, f, indent=4)
-        log.debug(f"Saving DNS record for {name} {(value, ttl_ts, ttl)}")
-
 
 def get_dns_record(name):
     with open(AUTH_SERVER_DB_FILE, "r") as f:
